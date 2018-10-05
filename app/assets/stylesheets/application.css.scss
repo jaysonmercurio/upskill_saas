@@ -21,6 +21,7 @@ h1, h2, h3 {
     font-family: 'K2D', sans-serif;
 }
 
+//Adds a gradient background to the navigation bar and home title
 .home-callout, .navbar {
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
@@ -31,23 +32,14 @@ h1, h2, h3 {
     border: none;
 }
 
-.navbar-default .navbar-brand {
-    color: white;
-}
-
-.navbar-default .navbar-brand:hover {
-    color: white;
-    opacity: 0.75;
-}
-
-
+// Refactored using SASS 
+.navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
     color: white;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-    color: white;
-    opacity: 0.75;
+    &:hover { //SASS specific syntax (nest)
+        color: white;
+        opacity: 0.75;
+    }
 }
 
 .home-callout {
